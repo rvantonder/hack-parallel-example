@@ -1,0 +1,12 @@
+(executable
+ (name main)
+ (libraries parallel))
+
+
+(alias
+ (name DEFAULT)
+  (deps main.exe))
+
+(install
+ (section bin)
+ (files (main.exe as main)))
