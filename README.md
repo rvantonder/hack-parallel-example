@@ -63,7 +63,7 @@ end
 module ExampleMemory = Memory.WithCache (StringKey) (IntValue)
 ```
 
-[Relevant memory interface](https://github.com/rvantonder/hack-parallel/blob/master/src/interface/hack_parallel_intf.mli#L142-L253), [Key signature](https://github.com/rvantonder/hack-parallel/blob/master/src/heap/sharedMem.ml#L723-L731), [Value signature](https://github.com/rvantonder/hack-parallel/blob/master/src/heap/value.ml).
+[Relevant memory interface](https://github.com/rvantonder/hack-parallel/blob/master/src/interface/memory.mli#L107-L216), [Key signature](https://github.com/rvantonder/hack-parallel/blob/master/src/heap/sharedMem.ml#L723-L731), [Value signature](https://github.com/rvantonder/hack-parallel/blob/master/src/heap/value.ml#L12-L25).
 
 In the example, operating on shared memory happens in two phases: one where we do work (convert to integer) and write values in parallel:
 
