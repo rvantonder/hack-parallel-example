@@ -1,28 +1,20 @@
-open Parallel
+open Core
+open Hack_parallel
 
 let create () =
   Scheduler.Daemon.check_entry_point ();
-  let scheduler = Scheduler.create ~number_of_workers:10 () in
-  scheduler
+  Scheduler.create ~number_of_workers:10 ()
 
 let () =
-  let files =
-    [ ("a", 3)
-    ; ("b", 4)
-    ; ("c", 4)
-    ; ("d", 2)
-    ; ("e", 3)
-    ; ("f", 9)
-    ; ("g", 2)
-    ]
-  in
-  Format.printf "Hello world@.";
-  let partitions = Scheduler.longest_processing_time_first 3 files in
-  List.iteri  (fun i partition ->
-      Format.printf "%d: [" i;
-      List.iter (fun element -> Format.printf "%s," element) partition;
-      Format.printf "]@.")
-    partitions;
+  let to_sum = [1; 2; 3; 4; 5; 6; 7; 8; 9; 10] in
   let scheduler = create () in
-  Format.printf "Ok world@.";
+  let sum =
+    Scheduler.map_reduce
+      scheduler
+      to_sum
+      ~init:0
+      ~map:(fun init bucket_values -> List.fold ~init ~f:(+) bucket_values)
+      ~reduce:(fun bucket_sum total_sum -> total_sum + bucket_sum)
+  in
+  Format.printf "Sum: %d@." sum;
   Scheduler.destroy scheduler;

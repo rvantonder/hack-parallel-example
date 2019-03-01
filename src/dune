@@ -1,6 +1,6 @@
 (executable
  (name main)
- (libraries parallel))
+ (libraries hack_parallel))
 
 
 (alias
