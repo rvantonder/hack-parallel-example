@@ -13,7 +13,7 @@ module IntValue = struct
   let description = "Value"
 end
 
-module ExampleMemory = SharedMem.WithCache (StringKey) (IntValue)
+module ExampleMemory = Memory.WithCache (StringKey) (IntValue)
 
 let create () =
   Scheduler.Daemon.check_entry_point ();
