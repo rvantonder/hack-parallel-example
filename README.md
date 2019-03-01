@@ -1,6 +1,14 @@
 # README
 
-In `src` there are two programs that demonstrate the hack parallel library. You can run `make` and then `./main.exe` and `./main_with_shared_memory.exe`.
+In `src` there are two programs that demonstrate the hack parallel library. 
+
+To run, first install [hack-parallel](https://github.com/rvantonder/hack-parallel):
+
+```
+git clone https://github.com/rvantonder/hack-parallel.git && cd hack-parallel && make && make install
+```
+
+Then you can run `make` for this repository and run the examples `./main.exe` and `./main_with_shared_memory.exe`.
 
 # Basic map reduce 
 
