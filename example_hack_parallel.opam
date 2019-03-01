@@ -1,7 +1,7 @@
 opam-version: "1.2"
 version: ""
 maintainer: "rvantonder@gmail.com"
-authors: "Rijnard van Tonder
+authors: "Rijnard van Tonder"
 homepage: "https://github.com/rvantonder/hack-parallel-example"
 bug-reports: "https://github.com/rvantonder/hack-parallel-example/issues"
 dev-repo: "https://github.com/rvantonder/hack-parallel-example.git"
