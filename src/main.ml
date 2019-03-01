@@ -16,11 +16,6 @@ let () =
     ; ("g", 2)
     ]
   in
-  (**
-     0: [d,e,b,]
-     1: [g,a,c,]
-     2: [f,]
-  *)
   Format.printf "Hello world@.";
   let partitions = Scheduler.longest_processing_time_first 3 files in
   List.iteri  (fun i partition ->
