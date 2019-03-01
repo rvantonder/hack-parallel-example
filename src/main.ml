@@ -17,4 +17,4 @@ let () =
       ~reduce:(fun bucket_sum total_sum -> total_sum + bucket_sum)
   in
   Format.printf "Sum: %d@." sum;
-  Scheduler.destroy scheduler;
+  Scheduler.destroy scheduler
