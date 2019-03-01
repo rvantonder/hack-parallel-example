@@ -71,7 +71,7 @@ In the example, operating on shared memory happens in two phases: one where we d
 let () =
   let to_sum = ["1"; "2"; "3"; "4"; "5"; "6"; "7"; "8"; "9"; "10"] in
   let scheduler = create () in
-  (* write values in parallel *)
+  (* convert and write values in parallel *)
   let () =
     Scheduler.iter scheduler to_sum ~f:(fun bucket_values ->
         List.iter bucket_values ~f:(fun value ->
