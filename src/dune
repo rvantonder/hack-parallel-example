@@ -1,5 +1,11 @@
 (executable
  (name main)
+ (modules main)
+ (libraries hack_parallel))
+
+(executable
+ (name main_with_shared_memory)
+ (modules main_with_shared_memory)
  (libraries hack_parallel))
 
 
@@ -7,6 +13,11 @@
  (name DEFAULT)
   (deps main.exe))
 
+(alias
+ (name DEFAULT)
+  (deps main_with_shared_memory.exe))
+
 (install
  (section bin)
- (files (main.exe as main)))
+ (files (main.exe as main)
+        (main_with_shared_memory.exe as main_with_shared_memory)))
