@@ -1,12 +1,12 @@
 (executable
  (name main)
  (modules main)
- (libraries hack_parallel))
+ (libraries hack_parallel core))
 
 (executable
  (name main_with_shared_memory)
  (modules main_with_shared_memory)
- (libraries hack_parallel))
+ (libraries hack_parallel core))
 
 
 (alias
