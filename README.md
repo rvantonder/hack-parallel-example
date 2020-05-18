@@ -2,13 +2,13 @@
 
 In `src` there are two programs that demonstrate the hack parallel library. 
 
-To run, first install [hack-parallel](https://github.com/rvantonder/hack-parallel):
+To run, first install [hack_parallel](https://github.com/rvantonder/hack_parallel#install-and-example).
 
 ```
-git clone https://github.com/rvantonder/hack-parallel.git && cd hack-parallel && make && make install
+opam install hack_parallel
 ```
 
-Then you can run `make` for this repository and run the examples `./main.exe` and `./main_with_shared_memory.exe`.
+Then you can run `make` in this repository (`hack-parallel-example`) and run the examples `./main.exe` and `./main_with_shared_memory.exe`.
 
 # Basic map reduce 
 
